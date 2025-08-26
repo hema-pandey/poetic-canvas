@@ -1,0 +1,131 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Dancing+Script&family=Inter:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  background: linear-gradient(to bottom right, #fffaf0, #fbeee6, #f8f1f1);
+  color: #2c2c2c;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  background-image: url('poem.jpg');
+  background-size: cover;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(2px);
+  color: #3c2a2a; /* soft brown or muted plum */
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  animation: fadeIn 1.5s ease;
+}
+
+header h1 {
+  font-size: 3em;
+  font-family: 'Dancing Script', cursive;
+  color: #5a3e36;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.subheading {
+  font-size: 1.2em;
+  font-style: italic;
+  color: #7a5c52;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.poem-card , .poem-card1 {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.poem-card::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(circle, rgba(255, 192, 203, 0.1), transparent);
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+.poem-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.15);
+}
+
+.poem-card h2 {
+  font-size: 1.8em;
+  color: #4b2e2e;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.card-intro {
+  font-style: italic;
+  color: #a67c6b;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  position: relative;
+  z-index: 1;
+}
+
+.poem-text {
+  position: relative;
+  z-index: 1;
+}
+
+.poem-text p {
+  margin: 12px 0;
+  line-height: 1.7;
+  font-size: 1.05em;
+  font-family: 'Inter', sans-serif;
+}
+
+.signature {
+  margin-top: 30px;
+  font-style: italic;
+  color: #6e4f4f;
+  text-align: right;
+  font-size: 1em;
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 1em;
+  color: #6e4f4f;
+  font-style: italic;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
